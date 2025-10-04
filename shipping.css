@@ -1,0 +1,373 @@
+ /* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #ffd700;
+  
+  z-index: 1000;
+  border-bottom: 1px solid #d62828;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;   /* Resize logo */
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+nav-spacer img {
+    height: 20px;
+    margin-left: 5px;
+    background-position: left;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d62828;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sign-in {
+    text-decoration: none;
+    color: #d62828;
+    font-weight: 600;
+}
+
+/* General Button Styles */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: #f56565;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #7628e3;
+    color: #fff;
+    width: 100%;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+
+
+/* Main Hero Section */
+main {
+    padding: 50px 5%;
+    background-color: rgb(247, 247, 146);
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+
+}
+/* Background Overlay */
+
+
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative; /* To keep content above the overlay */
+    z-index: 2;
+}
+
+.hero-text {
+    flex-basis: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+/* Quote Form */
+.quote-form-card {
+    flex-basis: 45%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quote-form-card h3 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.tabs {
+    display: flex;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4a5568;
+    border-radius: 6px;
+}
+
+.tab-link.active {
+    background-color: #f56565;
+    color: white;
+}
+
+form .form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+.weight-input { flex-grow: 2; }
+.form-row span { font-weight: 600; color: #718096; }
+
+.dimensions { flex-wrap: wrap; }
+.dimensions label { width: 100%; margin-bottom: 5px; font-size: 0.9rem; color: #718096; }
+.dimensions input { text-align: center; }
+.dimensions span { margin-left: auto; }
+
+
+/* Partners Section */
+.partners-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    position:relative; /* Above overlay */
+    z-index: 2;
+}
+
+.partners-container img {
+    height: 120px; /* Adjust height as needed */
+    max-width: 320px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: filter 0.3s, opacity 0.3s;
+    text-align: center;
+    text-align-last: center;
+}
+
+.partners-container img:hover {
+    filter: grayscale(0%);
+    opacity: 0.5;
+    
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Hide nav links on smaller screens for simplicity */
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .quote-form-card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+/* Section Titles */
+.section {
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #d62828;
+  margin-bottom: 40px;
+}
+
+/* How It Works */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.step:hover { transform: translateY(-5px); }
+
+/* Integration */
+.integration-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.integration-item {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* Services */
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #2d3748;
+  color: #fff;
+  padding: 50px 5%;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li { margin-bottom: 10px; }
+
+.footer-col ul li a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover { color: #fff; }
+
+.copyright {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cbd5e0;
+}
+/* Header/Navbar should always be on top */
+header, nav {
+  position: relative;
+  z-index: 1000; /* ensures navbar stays clickable above overlay */
+}
+
+/* Hero overlay must stay behind content */
+main::before {
+  z-index: 0; /* push overlay behind everything */
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1; /* text and form above overlay */
+}
+
